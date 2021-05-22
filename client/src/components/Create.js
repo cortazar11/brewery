@@ -12,7 +12,7 @@ class Create extends React.Component {
   }
 
   renderInput=(formProps)=>{
-    console.log('formProps',formProps)
+    console.log('formProperties',formProperties)
     return (
       <div className="item">
           <label>{formProps.label}</label>
