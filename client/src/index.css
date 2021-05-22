@@ -1,0 +1,85 @@
+img {
+  width: 70%;
+  height: auto;
+  border: 5px solid red;
+}
+
+.containerHome {
+  display: grid;
+  grid-template: 1fr 10rem / 1fr 2fr;
+  grid-template-areas:
+    'sidebar main'
+    'footer footer';
+  border: 5px solid pink;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #d0021b;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: chartreuse;
+  justify-content: center;
+  gap: 2%;
+}
+
+.sidebar {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-area: sidebar;
+  background-color: #9013fe;
+  border: 5px solid orange;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f8e71c;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: aquamarine;
+}
+
+form {
+  margin: 3em auto;
+  width: 60%;
+  padding: 1em;
+  background-color: lightgoldenrodyellow;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.error {
+  color: #d0021b;
+}
+
+.logins {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.logins > div {
+  border: 1px solid crimson;
+  width: 17em;
+  padding: 1em;
+  margin: 0.2em;
+  color: white;
+  background-color: #9013fe;
+  font-size: 1.3em;
+}
+
+.logins a {
+  color: white;
+}
