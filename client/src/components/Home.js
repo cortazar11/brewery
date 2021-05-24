@@ -1,7 +1,7 @@
 import React from 'react';
 import PostList from './PostList';
 import SideBar from './SideBar';
-import NavBar from './NavBar';
+
 
 
 const Home=()=>{
