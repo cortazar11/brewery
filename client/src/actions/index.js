@@ -1,5 +1,4 @@
 import jsonPlaceholder from '../apis/jsonPlaceholder';
-import _ from 'lodash';
 import axios from 'axios';
 import {FETCH_USER} from './types';
 

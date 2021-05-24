@@ -4,7 +4,7 @@ import beerImage from '../assets/matt-palmer-lGzhgzkN6UI-unsplash.jpg';
 const SideBar=()=>{
     return (
       <div className="sidebar">
-        <img src={beerImage} alt="Beer Image" />
+        <img src={beerImage} />
       </div>
     )
 }
