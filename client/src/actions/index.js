@@ -15,7 +15,7 @@ import {FETCH_USER} from './types';
 export const fetchUser=()=>{
 
     return async dispatch=>{
-      const response=await axios.get('http://miguelmartinez.dev/api/current_user')
+      const response=await axios.get('http://www.miguelmartinez.dev/api/current_user')
      
 
       dispatch({
