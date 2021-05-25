@@ -16,7 +16,7 @@ export const fetchUser=()=>{
 
     return async dispatch=>{
       const response=await axios.get('http://miguelmartinez.dev/api/current_user')
-      console.log('fetch_user',response.data)
+     
 
       dispatch({
         type: FETCH_USER,
