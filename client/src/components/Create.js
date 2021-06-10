@@ -12,7 +12,11 @@ class Create extends React.Component {
   }
 
   renderInput=(formProps)=>{
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 72814175ff65a2ca68edad7cd5a04ddf63539196
     return (
       <div className="item">
           <label>{formProps.label}</label>

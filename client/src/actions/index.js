@@ -1,5 +1,4 @@
 import jsonPlaceholder from '../apis/jsonPlaceholder';
-import _ from 'lodash';
 import axios from 'axios';
 import {FETCH_USER} from './types';
 
@@ -16,9 +15,14 @@ import {FETCH_USER} from './types';
 export const fetchUser=()=>{
 
     return async dispatch=>{
+<<<<<<< HEAD
       // const response=await axios.get('/api/current_user')
       const response=await axios.get(process.env.REACT_APP_AXIOS_URL+'/api/current_user')
       console.log('fetch_user',response.data)
+=======
+      const response=await axios.get('http://www.miguelmartinez.dev/api/current_user')
+     
+>>>>>>> 72814175ff65a2ca68edad7cd5a04ddf63539196
 
       dispatch({
         type: FETCH_USER,

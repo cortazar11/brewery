@@ -36,7 +36,7 @@ class PostList extends React.Component {
                 <h2>{brewerie.name}</h2>
                 <p>{brewerie.country}</p>
                 <p>{brewerie.city}</p>
-                <p><a href={brewerie.website_url} target="_blank">{brewerie.website_url}</a></p>
+                <p><a href={brewerie.website_url} target="_blank" rel="noreferrer">{brewerie.website_url}</a></p>
               </div>
            </div>
          )
