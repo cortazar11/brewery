@@ -45,7 +45,7 @@ class PostList extends React.Component {
 
     render(){
       console.log(this.props.posts)
-      return <div className="main">{this.renderList()}</div>
+      return <div className="mainHome">{this.renderList()}</div>
     
     }
 }

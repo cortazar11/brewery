@@ -17,7 +17,7 @@ export const fetchUser=()=>{
 
     return async dispatch=>{
       // const response=await axios.get('/api/current_user')
-      const response=await axios.get('process.env.REACT_APP_AXIOS_URL/api/current_user')
+      const response=await axios.get(process.env.REACT_APP_AXIOS_URL+'/api/current_user')
       console.log('fetch_user',response.data)
 
       dispatch({
@@ -26,6 +26,21 @@ export const fetchUser=()=>{
       })
     }
     
+}
+
+export const handleToken=(token)=>{
+
+  return async dispatch=>{
+   
+    const response=await axios.post('/api/stripe',token)
+    
+
+    dispatch({
+      type: FETCH_USER,
+      payload: response.data
+    })
+  }
+  
 }
 
 export const fetchPosts= ()=>{

@@ -37,6 +37,13 @@ spec:
                 name: server-clusterip-srv
                 port:
                   number: 5000
+          - path: /api/stripe
+            pathType: Prefix
+            backend:
+              service:
+                name: server-clusterip-srv
+                port:
+                  number: 5000
           - path: /
             pathType: Prefix
             backend:

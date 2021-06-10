@@ -4,5 +4,7 @@ module.exports={
   mongoURI: 'mongodb+srv://cortazar11:zpCT3yYNuGipQCLr@cluster0.msz3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   cookieKey: 'asdfgasdfasf',
   fbClientID: '126241166141625',
-  fbClientSecret: 'bf218a6b74396e2a73ec5f39040f58d8'
+  fbClientSecret: 'bf218a6b74396e2a73ec5f39040f58d8',
+  stripePublishableKey: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2',
+  stripeSecretKey: 'sk_test_dvfYejDw7g1ak3tcaU8gqk2w00mzloGbWb'
 }
