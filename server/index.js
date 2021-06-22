@@ -4,10 +4,12 @@ const cookieSession=require('cookie-session');
 const passport=require('passport');
 const bodyParser=require('body-parser');
 require('./models/User');
+require('./models/Details');
 require('./services/passport');
 
 const authRoutes=require('./routes/authRoutes');
 const billingRoutes=require('./routes/billingRoutes');
+const detailsRoutes= require('./routes/detailsRoutes');
 
 const keys=require('./config/keys')
 
@@ -33,6 +35,7 @@ mongoose.connect(keys.mongoURI, {
 
 authRoutes(app);
 billingRoutes(app);
+detailsRoutes(app);
 
 
 

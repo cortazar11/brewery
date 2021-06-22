@@ -3,6 +3,8 @@ import Payments from './Payments';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
+import DetailsForm from './DetailsForm';
+
 class Dashboard extends React.Component{
 
   
@@ -19,7 +21,11 @@ class Dashboard extends React.Component{
     return (
       <div className="main-content-dashboard">
           <div className="sidebarDashboard">{this.renderCredits()}</div>
-          <div className="mainDashboard"><Payments /></div>
+          <div className="mainDashboard">
+            <Payments />
+            <DetailsForm />
+          </div>
+         
       </div>
     )
   }

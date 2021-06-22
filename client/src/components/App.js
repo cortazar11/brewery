@@ -6,11 +6,15 @@ import Contact from './Contact';
 import Header from './Header';
 import NavBar from './NavBar'
 import Footer from './Footer';
-import Create from './Create';
+import DetailsForm from './DetailsForm';
+import Description from './Description';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import {connect}from 'react-redux';
 import * as actions from '../actions';
+
+
+
 
 class App extends React.Component {
 
@@ -30,8 +34,9 @@ class App extends React.Component {
                 <Route path="/" exact component={Home}/>
                 <Route path="/dashboard" component={Dashboard}/>
                 <Route path="/contact" component={Contact}/>
-                <Route path="/new" component={Create}/>
+                <Route path="/new" component={DetailsForm}/>
                 <Route path="/login" component={Login}/>
+                <Route path="/description" component={Description}/>
                 </Switch>
               <Footer />
             </div>

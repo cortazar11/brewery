@@ -1,33 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchPosts} from '../actions';
+import {fetchPosts, fetchDetails} from '../actions';
+import DetailsList from './DetailsList';
+import {Link} from 'react-router-dom';
 
-// import UserHeader from './UserHeader.js.old';
 
 class PostList extends React.Component {
 
-  // componentDidMount() {
-  //   this.props.fetchPostsAndUsers();
-  // }
+  
   componentDidMount(){
     this.props.fetchPosts()
+    this.props.fetchDetails()
   }
 
-    // renderList(){
-    //   return this.props.posts.map(post=>{
-    //     return <div className="item" key={post.id}>
-    //               <div className="content">
-    //                 <div className="description">
-    //                     <h2>{post.title}</h2>
-    //                     <p>{post.body}</p>
-    //                 </div>
-    //                 <UserHeader userId={post.userId}/>
-    //               </div>
-    //             </div>
-    //   })
-    // }
-
-    renderList(){
+    renderList1(){
      
       return this.props.posts.map(brewerie=>{
          return (
@@ -43,19 +29,39 @@ class PostList extends React.Component {
       })
     }
 
+    renderList2(){
+      return this.props.details.map(detail=>{
+        console.log('detail in postlist', detail)
+        return (
+          <Link to={{
+            pathname: "/description",
+            search:`${detail.title}`
+          }} >
+          <div>
+            <h2>{detail.title}</h2>
+            <p>{detail.country}</p>
+            <p>{detail.city}</p>
+            <div></div>
+            
+          </div>
+          </Link>
+        )
+      })
+  }
+
     render(){
-      console.log(this.props.posts)
-      return <div className="mainHome">{this.renderList()}</div>
+      
+      return <div className="mainHome">{this.renderList1()}{this.renderList2()}</div>
     
     }
 }
 
-const mapStateToProps=({posts})=>{
+const mapStateToProps=({posts,details})=>{
   return {
-    posts
+    posts, details
   }
 }
 
 export default connect(mapStateToProps,
-  { fetchPosts }
+  { fetchPosts, fetchDetails}
 )(PostList)

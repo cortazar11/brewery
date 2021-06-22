@@ -46,6 +46,24 @@ img {
   padding: 2em;
 }
 
+.Description {
+  display: flex;
+}
+
+.sideDescription {
+  width: 40em;
+}
+
+.mainDescription {
+  padding-top: 2em;
+}
+
+.mainDescription > div {
+  margin: 1em 0;
+  width: 80em;
+  background-color: linen;
+}
+
 .header {
   grid-area: header;
   background-color: cornflowerblue;
@@ -67,8 +85,9 @@ img {
   justify-items: center;
   align-items: start;
   grid-area: sidebarHome;
-  background-color: #9013fe;
+  background-color: darkorchid;
   text-align: center;
+  padding-top: 1em;
 }
 
 .mainHome {
