@@ -23,7 +23,7 @@ mongoose.connect(keys.mongoURI, {
   useCreateIndex: true,
   useUnifiedTopology: true,
 },()=>{
-  console.log('mongoose connected')
+  console.log('mongoose connectedddddd')
 });
 
 authRoutes(app);
