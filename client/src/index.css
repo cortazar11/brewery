@@ -16,7 +16,7 @@ img {
     'main-content'
     'footer';
   min-height: 100vh;
-  border: 1px solid red;
+ 
 }
 
 .main-content-home {
@@ -67,7 +67,7 @@ img {
 .header {
   grid-area: header;
   background-color: cornflowerblue;
-  border: 5px solid red;
+
 }
 
 .navbar {
