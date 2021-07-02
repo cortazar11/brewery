@@ -4,6 +4,7 @@ class Login extends React.Component{
 
   
   render(){
+    
     return (
       <div className="logins">
         <div><a href="/auth/google">Log in with Google</a></div>

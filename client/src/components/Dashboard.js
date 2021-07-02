@@ -1,9 +1,41 @@
 import React from 'react';
+import Payments from './Payments';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 
-const Dashboard=()=>{
-  return (
-    <div>Dashboard</div>
-  )
+import DetailsForm from './DetailsForm';
+
+class Dashboard extends React.Component{
+
+  
+
+  renderCredits(){
+    if(this.props.auth){
+      return <div>Credits: {this.props.auth.credits}</div>
+    }
+  }
+
+  render(){
+    console.log('this.props in Dashboard',this.props.auth)
+
+    return (
+      <div className="main-content-dashboard">
+          <div className="sidebarDashboard">{this.renderCredits()}</div>
+          <div className="mainDashboard">
+            <Payments />
+            <DetailsForm />
+          </div>
+         
+      </div>
+    )
+  }
+  
 }
 
-export default Dashboard;
+const mapStateToProps=({auth})=>{
+  return {
+    auth
+  }
+}
+
+export default connect(mapStateToProps,actions)(Dashboard);

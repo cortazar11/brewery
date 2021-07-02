@@ -17,6 +17,8 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
+          - src: 'src/index.css'
+            dest: .
     - image: miguelmartinez11/breweryserver
       context: server
       docker:
