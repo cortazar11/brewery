@@ -2,13 +2,13 @@ import React from 'react';
 import NavBar from './NavBar';
 
 
-const Header=()=>{
+const Header = () => {
   return (
     <div className="header">
-        <div>Header is here again and again!!!</div>
-        <NavBar />
+      <div>BREWERY LINK</div>
+      <NavBar />
     </div>
-    
+
   )
 }
 
