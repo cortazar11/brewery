@@ -1,11 +1,17 @@
-const express= require('express');
-const mongoose=require('mongoose');
-const cookieSession=require('cookie-session');
-const passport=require('passport');
-const bodyParser=require('body-parser');
+
+const express = require('express');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+
 require('./models/User');
 require('./models/Details');
 require('./services/passport');
+
+
+
+
+const app = express();
 
 const authRoutes=require('./routes/authRoutes');
 const billingRoutes=require('./routes/billingRoutes');
@@ -16,8 +22,9 @@ const keys=require('./config/keys')
 const app= express();
 
 app.use(bodyParser.json())
+
 app.use(cookieSession({
-  maxAge: 30 * 24* 60 *60 *1000,
+  maxAge: 30 * 24 * 60 * 60 * 1000,
   keys: [keys.cookieKey],
   secure: false
 }))
@@ -29,8 +36,10 @@ mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-},()=>{
-  console.log('mongoose connectedddddd')
+
+}, () => {
+  console.log('mongoose connectedddd')
+
 });
 
 authRoutes(app);
@@ -39,11 +48,11 @@ detailsRoutes(app);
 
 
 
-const PORT= process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
   console.log('v1000')
-  console.log('Starting up up...')
+  console.log('Starting up...')
 
 })
 
