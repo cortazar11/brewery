@@ -13,13 +13,13 @@ require('./services/passport');
 
 const app = express();
 
-const authRoutes=require('./routes/authRoutes');
-const billingRoutes=require('./routes/billingRoutes');
-const detailsRoutes= require('./routes/detailsRoutes');
+const authRoutes = require('./routes/authRoutes');
+const billingRoutes = require('./routes/billingRoutes');
+const detailsRoutes = require('./routes/detailsRoutes');
 
-const keys=require('./config/keys')
+const keys = require('./config/keys')
 
-const app= express();
+const app = express();
 
 app.use(bodyParser.json())
 
@@ -52,7 +52,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log('v1000')
-  console.log('Starting up...')
+  console.log('Starting ...')
 
 })
 
