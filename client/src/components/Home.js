@@ -6,13 +6,10 @@ import SideBar from './SideBar';
 
 const Home=()=>{
   return (
-          <div className="containerHome">
+          <div className="main-content-home">
             <SideBar />
             <PostList />
-            
-            <div className="footer">Footer</div>
-            
-         </div>
+           </div>
       )
 }
 

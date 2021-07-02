@@ -18,7 +18,7 @@ class NavBar extends React.Component {
         }
       }
       render(){
-        console.log('this.props',this.props.auth)
+       
         return (
           <div className="navbar">
             <div><Link to="/">Home</Link></div>
