@@ -2,12 +2,12 @@ import React from 'react';
 import NavBar from './NavBar';
 
 
-const Header=()=>{
+const Header = () => {
   return (
     <div className="header">
       <div className="logo">BREWERY CONNECTION</div>
     </div>
-    
+
   )
 }
 
