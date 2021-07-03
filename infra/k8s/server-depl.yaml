@@ -24,26 +24,26 @@ spec:
               value: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2'
             - name: MONGO_URI
               value: 'mongodb+srv://cortazar11:zpCT3yYNuGipQCLr@cluster0.msz3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-            - name: GOOGLE_CLIENT_SECRET
+            - name: googleClientSecret
               valueFrom:
                 secretKeyRef:
                   name: google-secret
-                  key: GOOGLE_CLIENT_SECRET
-            - name: FACEBOOK_CLIENT_SECRET
+                  key: googleClientSecret
+            - name: fbClientSecret
               valueFrom:
                 secretKeyRef:
                   name: facebook-secret
-                  key: FACEBOOK_CLIENT_KEY
-            - name: STRIPE_SECRET_KEY
+                  key: fbClientSecret
+            - name: stripeSecretKey
               valueFrom:
                 secretKeyRef:
                   name: stripe-secret
-                  key: STRIPE_SECRET_KEY
-            - name: COOKIE_KEY
+                  key: stripeSecretKey
+            - name: cookieKey
               valueFrom:
                 secretKeyRef:
                   name: cookie-secret
-                  key: COOKIE_KEY
+                  key: cookieKey
 ---
 apiVersion: v1
 kind: Service
