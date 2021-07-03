@@ -22,7 +22,7 @@ spec:
               value: '126241166141625'
             - name: stripePublishableKey
               value: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2'
-            - name: MONGO_URI
+            - name: mongoURI
               value: 'mongodb+srv://cortazar11:zpCT3yYNuGipQCLr@cluster0.msz3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
             - name: googleClientSecret
               valueFrom:

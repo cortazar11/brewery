@@ -33,7 +33,8 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-mongoose.connect(keys.mongoURI, {
+// mongoose.connect(keys.mongoURI, {
+mongoose.connect(process.env.mongoURI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
