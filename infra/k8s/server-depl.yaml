@@ -16,6 +16,12 @@ spec:
         - name: server
           image: miguelmartinez11/breweryserver
           env:
+            - name: googleClientID
+              value: '503741842922-kaceqbu89jmhgjapsrk7ebq01semj8h7.apps.googleusercontent.com'
+            - name: fbClientID
+              value: '126241166141625'
+            - name: stripePublishableKey
+              value: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2'
             - name: MONGO_URI
               value: 'mongodb+srv://cortazar11:zpCT3yYNuGipQCLr@cluster0.msz3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
             - name: GOOGLE_CLIENT_SECRET
